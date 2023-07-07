@@ -1,0 +1,31 @@
+version: "3.1"
+
+intents:
+  - greet
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+responses:  
+  utter_greet:
+  - text: "Hi I am an H P C A I. What can I help you with?"
+
+stories:
+- story: greet 1
+  steps:
+  - intent: greet
+  - action: utter_greet

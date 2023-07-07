@@ -1,0 +1,61 @@
+version: "3.1"
+
+nlu:
+- lookup: cpu
+  examples: |
+    - core
+    - cores
+    - processor
+    - proc
+    - cpus
+    - threads
+    - c p u's
+    - c p u
+    - corps
+    - chords
+    - chors
+    - chorus
+    - cars
+
+- lookup: memory
+  examples: |
+    - mem
+    - dimms
+    - ram
+
+- lookup: node
+  examples: |
+    - note
+    - notes
+
+- lookup: desktop
+  examples: |
+    - desk top
+
+- lookup: abaqus
+  examples: |
+    - abacus
+
+- lookup: jupyter
+  examples: |
+    - jupiter
+
+- lookup: paraview
+  examples: |
+    - pair of you
+    - pair a view
+    - care of view
+
+- lookup: starccm
+  examples: |
+    - star ccm
+    - star c c m
+    - strcm plus
+
+- lookup: hpc
+  examples: |
+    - h p c
+    - H P C
+    - h b c
+    - HPC
+    - high performance computing

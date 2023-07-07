@@ -1,0 +1,25 @@
+version: "3.1"
+
+intents:
+  - out_of_scope
+
+nlu:
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - Who's the US President?
+    - what kind of car do you drive?
+    - tell me about puppies
+    - tell me about cars
+    - I want to hear about mountains
+
+responses:  
+  utter_out_of_scope:
+  - text: Sorry, that functionality doesn't exist yet. I'm still learning. 
+  - text: Sorry, I may have misunderstood. That seemed out of my current scope.
+
+stories:
+- story: out_of_scope 1
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope

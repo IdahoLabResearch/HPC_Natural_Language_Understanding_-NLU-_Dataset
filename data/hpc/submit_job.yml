@@ -1,0 +1,323 @@
+version: "3.1"
+
+intents:
+- submit_job
+- job_submission_details
+
+entities:
+- nodes
+- cores
+- memory
+- walltime
+- program
+
+slots:
+  nodes:
+    type: float
+    min_value: 1.0
+    max_value: 100.0
+    mappings:
+    - type: from_entity
+      entity: nodes
+  cores:
+    type: float
+    min_value: 1.0
+    max_value: 48.0
+    mappings:
+    - type: from_entity
+      entity: cores
+  walltime:
+    type: text
+    # initial_value: 1 hour
+    mappings:
+    - type: from_entity
+      entity: walltime
+  program:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: program
+  
+forms:
+  job_request_form:
+    required_slots:
+        - system_name
+        - nodes
+        - cores
+        - walltime
+        - program
+
+# If the text for these responses change, make you sure that the new text is reflected in the intent recognition section of the mlops api or
+#   certain functionality may no longer work as intended.
+responses:
+  utter_ask_job_request_form_system_name:
+  - text: "Which system would you like to submit a job to? You can submit to {SYSTEM_STR_LIST}"
+
+  utter_ask_job_request_form_nodes:
+  - text: "How many nodes would you like to run on? This is usually just one but you can specify more if you would like."
+
+  utter_ask_job_request_form_cores:
+  - text: "How many cores do you want? If you aren't sure, between one and four is usually a safe bet."
+
+  utter_ask_job_request_form_walltime:
+  - text: "How long do you want your job to run? Shorter jobs usually start faster."
+
+  utter_ask_job_request_form_program:
+  - text: "What program do you want to start? As an example, you can start a linux desktop."
+
+  utter_ask_continue:
+  - text: "Okay, you have requested {system_name} to run {program} on {nodes}, with {cores}, for {walltime}. Do you want to submit this job?"
+
+rules:
+- rule: Activate submission form
+  condition:
+  - active_loop: job_request_form
+  steps:
+  - intent: submit_job
+  - action: job_request_form
+  - active_loop: job_request_form
+
+stories:
+
+- story: interactive_story_1
+  steps:
+  - intent: submit_job
+  - action: job_request_form
+  - active_loop: job_request_form
+  - slot_was_set:
+    - requested_slot: system_name
+  - slot_was_set:
+    - system_name: {EXAMPLE_SYSTEM_1}
+  - slot_was_set:
+    - requested_slot: nodes
+  - slot_was_set:
+    - nodes: 2 nodes
+  - slot_was_set:
+    - requested_slot: cores
+  - slot_was_set:
+    - cores: 48 cores
+  - slot_was_set:
+    - requested_slot: walltime
+  - slot_was_set:
+    - walltime: 3 hours
+  - slot_was_set:
+    - requested_slot: program
+  - slot_was_set:
+    - program: python3
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_affirm
+  # - action: utter_stop
+
+- story: interactive_story_2
+  steps:
+  - intent: submit_job
+    entities:
+    - program: Abaqus
+    - nodes: 4
+  - slot_was_set:
+    - nodes: 4
+  - slot_was_set:
+    - program: Abaqus
+  - action: job_request_form
+  - active_loop: job_request_form
+  - slot_was_set:
+    - nodes: 4
+  - slot_was_set:
+    - program: Abaqus
+  - slot_was_set:
+    - requested_slot: system_name
+  - slot_was_set:
+    - system_name: {EXAMPLE_SYSTEM_1}
+  - slot_was_set:
+    - requested_slot: cores
+  - slot_was_set:
+    - cores: 12
+  - slot_was_set:
+    - requested_slot: walltime
+  - slot_was_set:
+    - walltime: 1 hour
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_affirm
+  # - action: utter_stop
+
+- story: interactive_story_3
+  steps:
+  - intent: submit_job
+    entities:
+    - program: starccm+
+    - nodes: 2
+  - action: job_request_form
+  - active_loop: job_request_form
+  - slot_was_set:
+    - nodes: 2
+  - slot_was_set:
+    - program: starccm+
+  - slot_was_set:
+    - requested_slot: system_name
+  - slot_was_set:
+    - system_name: {EXAMPLE_SYSTEM_1}
+  - slot_was_set:
+    - requested_slot: cores
+  - slot_was_set:
+    - cores: 48
+  - slot_was_set:
+    - requested_slot: walltime
+  - slot_was_set:
+    - walltime: 120 hours
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_affirm
+  # - action: utter_stop
+
+- story: interactive_story_4
+  steps:
+  - intent: submit_job
+  - action: job_request_form
+  - active_loop: job_request_form
+  - slot_was_set:
+    - requested_slot: system_name
+  - slot_was_set:
+    - system_name: {EXAMPLE_SYSTEM_1}
+  - slot_was_set:
+    - requested_slot: nodes
+  - slot_was_set:
+    - nodes: 2
+  - slot_was_set:
+    - requested_slot: cores
+  - slot_was_set:
+    - cores: 48
+  - slot_was_set:
+    - requested_slot: walltime
+  - slot_was_set:
+    - walltime: 1 hour
+  - slot_was_set:
+    - requested_slot: program
+  - slot_was_set:
+    - program: paraview
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_affirm
+  # - action: utter_stop
+
+- story: interactive_story_5
+  steps:
+  - intent: submit_job
+    entities:
+    - system_name: {EXAMPLE_SYSTEM_1}
+    - walltime: 24 hours
+  - action: job_request_form
+  - active_loop: job_request_form
+  - slot_was_set:
+    - system_name: {EXAMPLE_SYSTEM_1}
+  - slot_was_set:
+    - walltime: 24 hours
+  - slot_was_set:
+    - requested_slot: nodes
+  - intent: job_submission_details
+    entities:
+    - nodes: 15
+  - action: job_request_form
+  - slot_was_set:
+    - nodes: 15
+  - slot_was_set:
+    - requested_slot: cores
+  - intent: job_submission_details
+    entities:
+    - cores: 9
+  - action: job_request_form
+  - slot_was_set:
+    - cores: 9
+  - slot_was_set:
+    - requested_slot: program
+  - slot_was_set:
+    - program: paraview
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_affirm
+  # - action: utter_stop
+
+- story: interactive_story_6
+  steps:
+  - intent: submit_job
+    entities:
+    - program: python
+    - system_name: {EXAMPLE_SYSTEM_1}
+  - slot_was_set:
+    - system_name: {EXAMPLE_SYSTEM_1}
+  - slot_was_set:
+    - program: python
+  - action: job_request_form
+  - active_loop: job_request_form
+  - slot_was_set:
+    - program: python
+  - slot_was_set:
+    - requested_slot: nodes
+  - slot_was_set:
+    - nodes: 1 node
+  - slot_was_set:
+    - requested_slot: cores
+  - slot_was_set:
+    - cores: 2 cores
+  - slot_was_set:
+    - requested_slot: walltime
+  - slot_was_set:
+    - walltime: 4 hours
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_affirm
+  # - action: utter_stop
+
+- story: interactive_story_7
+  steps:
+  - intent: submit_job
+    entities:
+    - system_name: {EXAMPLE_SYSTEM_2}
+  - slot_was_set:
+    - system_name: {EXAMPLE_SYSTEM_2}
+  - action: job_request_form
+  - active_loop: job_request_form
+  - slot_was_set:
+    - system_name: {EXAMPLE_SYSTEM_2}
+  - slot_was_set:
+    - requested_slot: nodes
+  - slot_was_set:
+    - nodes: 2 nodes
+  - slot_was_set:
+    - requested_slot: cores
+  - slot_was_set:
+    - cores: 36 cores
+  - slot_was_set:
+    - requested_slot: walltime
+  - slot_was_set:
+    - walltime: 45 minutes
+  - slot_was_set:
+    - requested_slot: program
+  - slot_was_set:
+    - program: desktop
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_affirm
+  # - action: utter_stop

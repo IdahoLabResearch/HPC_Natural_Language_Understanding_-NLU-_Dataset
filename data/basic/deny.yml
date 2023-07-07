@@ -1,0 +1,27 @@
+version: "3.1"
+
+intents:
+  - deny
+
+nlu:
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - that's wrong
+    - nah
+
+responses:
+  utter_deny:
+  - text: Okay, you said no.
+
+stories:
+- story: deny 1
+  steps:
+  - intent: deny
+  - action: utter_deny

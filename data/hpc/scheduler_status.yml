@@ -1,0 +1,45 @@
+version: "3.1"
+
+intents:
+- hpc_scheduler_status
+
+entities:
+- scheduler_name
+
+slots:
+  scheduler_name:
+    type: categorical
+    influence_conversation: true
+    values:
+    - slurm
+    - pbs
+    - flux
+    mappings:
+    - type: custom
+
+
+nlu:
+- intent: hpc_scheduler_status
+  examples: |
+    - what's the status of the scheduler?
+    - how's the scheduler?
+    - What's going on with the scheduler?
+    - Is there an issue with [PBS]{"entity": "scheduler_name"}?
+    - Is [slurm]{"entity": "scheduler_name"} having issues?
+
+responses:
+  utter_hpc_scheduler_status:
+  - text: "The status of the scheduler is OK!"
+
+stories:
+- story: hpc scheduler status 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: hpc_scheduler_status
+  - action: utter_hpc_scheduler_status
+
+- story: hpc scheduler status 2
+  steps:
+  - intent: hpc_scheduler_status
+  - action: utter_hpc_scheduler_status

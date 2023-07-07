@@ -1,0 +1,29 @@
+version: "3.1"
+
+intents:
+  - help
+
+nlu:
+- intent: help
+  examples: |
+    - help!
+    - help me please
+    - I need assistance.
+    - I'm having problems.
+    - how do I?
+    - I need help.
+    - I'm having trouble
+    - this is broken
+    - my code isn't working
+    - I can't schedule my job
+    - halp
+
+responses:  
+  utter_help:
+  - text: "What can I help you with?"
+
+stories:
+- story: help 1
+  steps:
+  - intent: help
+  - action: utter_help

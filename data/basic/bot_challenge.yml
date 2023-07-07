@@ -1,0 +1,30 @@
+version: "3.1"
+
+intents:
+  - bot_challenge
+
+nlu:
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+responses: 
+  utter_bot_challenge:
+  - text: "I am an artificial intelligence."
+
+rules:
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+
+stories:
+- story: bot_challenge 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_bot_challenge

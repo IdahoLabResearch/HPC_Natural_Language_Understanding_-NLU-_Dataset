@@ -1,0 +1,28 @@
+version: "3.1"
+
+intents:
+- hpc_job_status
+
+nlu:
+- intent: hpc_job_status
+  examples: |
+    - what's the status of my job?
+    - What jobs are running?
+    - How are jobs doing?
+
+responses:
+  utter_hpc_job_status:
+  - text: "The status of the jobs.. hmm.."
+
+stories:
+- story: hpc job status 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: hpc_job_status
+  - action: utter_hpc_job_status
+
+- story: hpc job status 2
+  steps:
+  - intent: hpc_job_status
+  - action: utter_hpc_job_status

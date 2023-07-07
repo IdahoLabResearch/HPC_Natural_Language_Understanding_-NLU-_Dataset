@@ -1,0 +1,23 @@
+version: "3.1"
+
+intents:
+  - please_rephrase
+
+nlu:
+- intent: please_rephrase
+  examples: |
+    - code
+    - machine learning
+    - everything
+    - anything
+    - nothing
+
+responses:  
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase? 
+
+stories:
+- story: help 1
+  steps:
+  - intent: please_rephrase
+  - action: utter_please_rephrase

@@ -1,0 +1,621 @@
+nlu:
+- intent: job_submission_details
+  examples: |
+    - [78 proc]{"entity": "cores", "value": "78 cores"}
+    - [68 chors]{"entity": "cores", "value": "68 cores"}
+    - [62 core]{"entity": "cores", "value": "62 cores"}
+    - [73 cpu]{"entity": "cores", "value": "73 cores"}
+    - [51 cars]{"entity": "cores", "value": "51 cores"}
+    - [33 threads]{"entity": "cores", "value": "33 cores"}
+    - [90 processor]{"entity": "cores", "value": "90 cores"}
+    - [76 corps]{"entity": "cores", "value": "76 cores"}
+    - [54 c p u]{"entity": "cores", "value": "54 cores"}
+    - [74 threads]{"entity": "cores", "value": "74 cores"}
+    - [84 cars]{"entity": "cores", "value": "84 cores"}
+    - [88 core]{"entity": "cores", "value": "88 cores"}
+    - [65 proc]{"entity": "cores", "value": "65 cores"}
+    - [85 threads]{"entity": "cores", "value": "85 cores"}
+    - [91 chords]{"entity": "cores", "value": "91 cores"}
+    - [19 c p u]{"entity": "cores", "value": "19 cores"}
+    - [86 processor]{"entity": "cores", "value": "86 cores"}
+    - [48 processor]{"entity": "cores", "value": "48 cores"}
+    - [21 cpus]{"entity": "cores", "value": "21 cores"}
+    - [53 processor]{"entity": "cores", "value": "53 cores"}
+    - [44 corps]{"entity": "cores", "value": "44 cores"}
+    - [20 cpus]{"entity": "cores", "value": "20 cores"}
+    - [8 cars]{"entity": "cores", "value": "8 cores"}
+    - [85 corps]{"entity": "cores", "value": "85 cores"}
+    - [99 chors]{"entity": "cores", "value": "99 cores"}
+    - [51 cars]{"entity": "cores", "value": "51 cores"}
+    - [69 cars]{"entity": "cores", "value": "69 cores"}
+    - [16 cpus]{"entity": "cores", "value": "16 cores"}
+    - [21 chorus]{"entity": "cores", "value": "21 cores"}
+    - [52 chors]{"entity": "cores", "value": "52 cores"}
+    - [52 chors]{"entity": "cores", "value": "52 cores"}
+    - [54 cars]{"entity": "cores", "value": "54 cores"}
+    - [79 corps]{"entity": "cores", "value": "79 cores"}
+    - [61 cpus]{"entity": "cores", "value": "61 cores"}
+    - [95 corps]{"entity": "cores", "value": "95 cores"}
+    - [36 chorus]{"entity": "cores", "value": "36 cores"}
+    - [81 threads]{"entity": "cores", "value": "81 cores"}
+    - [11 cpu]{"entity": "cores", "value": "11 cores"}
+    - [16 c p u]{"entity": "cores", "value": "16 cores"}
+    - [54 chors]{"entity": "cores", "value": "54 cores"}
+    - [72 chorus]{"entity": "cores", "value": "72 cores"}
+    - [10 threads]{"entity": "cores", "value": "10 cores"}
+    - [45 chors]{"entity": "cores", "value": "45 cores"}
+    - [36 chords]{"entity": "cores", "value": "36 cores"}
+    - [57 core]{"entity": "cores", "value": "57 cores"}
+    - [53 processor]{"entity": "cores", "value": "53 cores"}
+    - [12 core]{"entity": "cores", "value": "12 cores"}
+    - [49 processor]{"entity": "cores", "value": "49 cores"}
+    - [23 cpu]{"entity": "cores", "value": "23 cores"}
+    - [61 cpu]{"entity": "cores", "value": "61 cores"}
+    - [8 chors]{"entity": "cores", "value": "8 cores"}
+    - [24 proc]{"entity": "cores", "value": "24 cores"}
+    - [97 corps]{"entity": "cores", "value": "97 cores"}
+    - [57 proc]{"entity": "cores", "value": "57 cores"}
+    - [40 processor]{"entity": "cores", "value": "40 cores"}
+    - [70 cpus]{"entity": "cores", "value": "70 cores"}
+    - [66 chords]{"entity": "cores", "value": "66 cores"}
+    - [76 cpu]{"entity": "cores", "value": "76 cores"}
+    - [69 cpu]{"entity": "cores", "value": "69 cores"}
+    - [19 proc]{"entity": "cores", "value": "19 cores"}
+    - [5 c p u]{"entity": "cores", "value": "5 cores"}
+    - [27 corps]{"entity": "cores", "value": "27 cores"}
+    - [73 c p u]{"entity": "cores", "value": "73 cores"}
+    - [50 c p u]{"entity": "cores", "value": "50 cores"}
+    - [45 c p u's]{"entity": "cores", "value": "45 cores"}
+    - [61 proc]{"entity": "cores", "value": "61 cores"}
+    - [32 c p u's]{"entity": "cores", "value": "32 cores"}
+    - [75 chors]{"entity": "cores", "value": "75 cores"}
+    - [86 chords]{"entity": "cores", "value": "86 cores"}
+    - [11 threads]{"entity": "cores", "value": "11 cores"}
+    - [5 chords]{"entity": "cores", "value": "5 cores"}
+    - [66 threads]{"entity": "cores", "value": "66 cores"}
+    - [77 c p u]{"entity": "cores", "value": "77 cores"}
+    - [70 cars]{"entity": "cores", "value": "70 cores"}
+    - [24 cars]{"entity": "cores", "value": "24 cores"}
+    - [88 proc]{"entity": "cores", "value": "88 cores"}
+    - [77 cars]{"entity": "cores", "value": "77 cores"}
+    - [77 corps]{"entity": "cores", "value": "77 cores"}
+    - [56 c p u]{"entity": "cores", "value": "56 cores"}
+    - [1 proc]{"entity": "cores", "value": "1 cores"}
+    - [31 chors]{"entity": "cores", "value": "31 cores"}
+    - [31 cars]{"entity": "cores", "value": "31 cores"}
+    - [44 processor]{"entity": "cores", "value": "44 cores"}
+    - [94 cars]{"entity": "cores", "value": "94 cores"}
+    - [37 core]{"entity": "cores", "value": "37 cores"}
+    - [99 cars]{"entity": "cores", "value": "99 cores"}
+    - [51 cores]{"entity": "cores", "value": "51 cores"}
+    - [23 cpus]{"entity": "cores", "value": "23 cores"}
+    - [87 chords]{"entity": "cores", "value": "87 cores"}
+    - [65 c p u's]{"entity": "cores", "value": "65 cores"}
+    - [63 core]{"entity": "cores", "value": "63 cores"}
+    - [54 proc]{"entity": "cores", "value": "54 cores"}
+    - [55 cores]{"entity": "cores", "value": "55 cores"}
+    - [72 corps]{"entity": "cores", "value": "72 cores"}
+    - [21 cores]{"entity": "cores", "value": "21 cores"}
+    - [20 chorus]{"entity": "cores", "value": "20 cores"}
+    - [77 threads]{"entity": "cores", "value": "77 cores"}
+    - [2 chorus]{"entity": "cores", "value": "2 cores"}
+    - [40 chorus]{"entity": "cores", "value": "40 cores"}
+    - [58 cpu]{"entity": "cores", "value": "58 cores"}
+    - [47 cpus]{"entity": "cores", "value": "47 cores"}
+    - [71 cpu]{"entity": "cores", "value": "71 cores"}
+    - [51 threads]{"entity": "cores", "value": "51 cores"}
+    - [14 cpu]{"entity": "cores", "value": "14 cores"}
+    - [58 proc]{"entity": "cores", "value": "58 cores"}
+    - [33 chors]{"entity": "cores", "value": "33 cores"}
+    - [99 chorus]{"entity": "cores", "value": "99 cores"}
+    - [40 chors]{"entity": "cores", "value": "40 cores"}
+    - [57 cpu]{"entity": "cores", "value": "57 cores"}
+    - [40 chors]{"entity": "cores", "value": "40 cores"}
+    - [57 cpu]{"entity": "cores", "value": "57 cores"}
+    - [1 corps]{"entity": "cores", "value": "1 cores"}
+    - [93 processor]{"entity": "cores", "value": "93 cores"}
+    - [48 proc]{"entity": "cores", "value": "48 cores"}
+    - [20 cars]{"entity": "cores", "value": "20 cores"}
+    - [92 c p u]{"entity": "cores", "value": "92 cores"}
+    - [12 c p u's]{"entity": "cores", "value": "12 cores"}
+    - [4 cars]{"entity": "cores", "value": "4 cores"}
+    - [92 corps]{"entity": "cores", "value": "92 cores"}
+    - [24 chors]{"entity": "cores", "value": "24 cores"}
+    - [97 corps]{"entity": "cores", "value": "97 cores"}
+    - [54 chors]{"entity": "cores", "value": "54 cores"}
+    - [74 chorus]{"entity": "cores", "value": "74 cores"}
+    - [20 chorus]{"entity": "cores", "value": "20 cores"}
+    - [39 core]{"entity": "cores", "value": "39 cores"}
+    - [6 chords]{"entity": "cores", "value": "6 cores"}
+    - [87 processor]{"entity": "cores", "value": "87 cores"}
+    - [78 corps]{"entity": "cores", "value": "78 cores"}
+    - [94 cpu]{"entity": "cores", "value": "94 cores"}
+    - [18 cars]{"entity": "cores", "value": "18 cores"}
+    - [31 cpus]{"entity": "cores", "value": "31 cores"}
+    - [2 threads]{"entity": "cores", "value": "2 cores"}
+    - [82 chorus]{"entity": "cores", "value": "82 cores"}
+    - [69 cores]{"entity": "cores", "value": "69 cores"}
+    - [42 chors]{"entity": "cores", "value": "42 cores"}
+    - [93 c p u's]{"entity": "cores", "value": "93 cores"}
+    - [18 threads]{"entity": "cores", "value": "18 cores"}
+    - [17 proc]{"entity": "cores", "value": "17 cores"}
+    - [13 chords]{"entity": "cores", "value": "13 cores"}
+    - [32 cars]{"entity": "cores", "value": "32 cores"}
+    - [13 c p u]{"entity": "cores", "value": "13 cores"}
+    - [81 proc]{"entity": "cores", "value": "81 cores"}
+    - [70 cores]{"entity": "cores", "value": "70 cores"}
+    - [44 chorus]{"entity": "cores", "value": "44 cores"}
+    - [52 c p u's]{"entity": "cores", "value": "52 cores"}
+    - [14 chorus]{"entity": "cores", "value": "14 cores"}
+    - [34 core]{"entity": "cores", "value": "34 cores"}
+    - [78 corps]{"entity": "cores", "value": "78 cores"}
+    - [52 c p u's]{"entity": "cores", "value": "52 cores"}
+    - [28 processor]{"entity": "cores", "value": "28 cores"}
+    - [95 chors]{"entity": "cores", "value": "95 cores"}
+    - [78 c p u's]{"entity": "cores", "value": "78 cores"}
+    - [94 core]{"entity": "cores", "value": "94 cores"}
+    - [11 proc]{"entity": "cores", "value": "11 cores"}
+    - [21 processor]{"entity": "cores", "value": "21 cores"}
+    - [1 proc]{"entity": "cores", "value": "1 cores"}
+    - [19 threads]{"entity": "cores", "value": "19 cores"}
+    - [72 cpus]{"entity": "cores", "value": "72 cores"}
+    - [33 c p u's]{"entity": "cores", "value": "33 cores"}
+    - [53 cpus]{"entity": "cores", "value": "53 cores"}
+    - [37 processor]{"entity": "cores", "value": "37 cores"}
+    - [58 processor]{"entity": "cores", "value": "58 cores"}
+    - [22 cpus]{"entity": "cores", "value": "22 cores"}
+    - [90 c p u's]{"entity": "cores", "value": "90 cores"}
+    - [72 chors]{"entity": "cores", "value": "72 cores"}
+    - [77 chords]{"entity": "cores", "value": "77 cores"}
+    - [92 c p u]{"entity": "cores", "value": "92 cores"}
+    - [87 corps]{"entity": "cores", "value": "87 cores"}
+    - [71 corps]{"entity": "cores", "value": "71 cores"}
+    - [84 proc]{"entity": "cores", "value": "84 cores"}
+    - [93 processor]{"entity": "cores", "value": "93 cores"}
+    - [9 chors]{"entity": "cores", "value": "9 cores"}
+    - [37 chors]{"entity": "cores", "value": "37 cores"}
+    - [90 core]{"entity": "cores", "value": "90 cores"}
+    - [96 chords]{"entity": "cores", "value": "96 cores"}
+    - [88 c p u's]{"entity": "cores", "value": "88 cores"}
+    - [76 chords]{"entity": "cores", "value": "76 cores"}
+    - [79 cars]{"entity": "cores", "value": "79 cores"}
+    - [94 threads]{"entity": "cores", "value": "94 cores"}
+    - [87 corps]{"entity": "cores", "value": "87 cores"}
+    - [23 c p u's]{"entity": "cores", "value": "23 cores"}
+    - [17 c p u]{"entity": "cores", "value": "17 cores"}
+    - [84 processor]{"entity": "cores", "value": "84 cores"}
+    - [97 cpu]{"entity": "cores", "value": "97 cores"}
+    - [13 processor]{"entity": "cores", "value": "13 cores"}
+    - [52 processor]{"entity": "cores", "value": "52 cores"}
+    - [92 proc]{"entity": "cores", "value": "92 cores"}
+    - [84 c p u]{"entity": "cores", "value": "84 cores"}
+    - [97 c p u's]{"entity": "cores", "value": "97 cores"}
+    - [62 cores]{"entity": "cores", "value": "62 cores"}
+    - [78 threads]{"entity": "cores", "value": "78 cores"}
+    - [59 corps]{"entity": "cores", "value": "59 cores"}
+    - [97 chors]{"entity": "cores", "value": "97 cores"}
+    - [41 processor]{"entity": "cores", "value": "41 cores"}
+    - [67 chords]{"entity": "cores", "value": "67 cores"}
+    - [8 c p u's]{"entity": "cores", "value": "8 cores"}
+    - [47 cars]{"entity": "cores", "value": "47 cores"}
+    - [69 corps]{"entity": "cores", "value": "69 cores"}
+    - [39 chords]{"entity": "cores", "value": "39 cores"}
+    - [44 cpus]{"entity": "cores", "value": "44 cores"}
+    - [8 nodes]{"entity": "nodes", "value": "8 nodes"}
+    - [7 note]{"entity": "nodes", "value": "7 nodes"}
+    - [10 nodes]{"entity": "nodes", "value": "10 nodes"}
+    - [14 notes]{"entity": "nodes", "value": "14 nodes"}
+    - [3 nodes]{"entity": "nodes", "value": "3 nodes"}
+    - [5 notes]{"entity": "nodes", "value": "5 nodes"}
+    - [16 notes]{"entity": "nodes", "value": "16 nodes"}
+    - [11 nodes]{"entity": "nodes", "value": "11 nodes"}
+    - [5 notes]{"entity": "nodes", "value": "5 nodes"}
+    - [6 notes]{"entity": "nodes", "value": "6 nodes"}
+    - [5 notes]{"entity": "nodes", "value": "5 nodes"}
+    - [11 notes]{"entity": "nodes", "value": "11 nodes"}
+    - [9 notes]{"entity": "nodes", "value": "9 nodes"}
+    - [18 notes]{"entity": "nodes", "value": "18 nodes"}
+    - [7 notes]{"entity": "nodes", "value": "7 nodes"}
+    - [7 notes]{"entity": "nodes", "value": "7 nodes"}
+    - [6 notes]{"entity": "nodes", "value": "6 nodes"}
+    - [12 nodes]{"entity": "nodes", "value": "12 nodes"}
+    - [8 note]{"entity": "nodes", "value": "8 nodes"}
+    - [13 nodes]{"entity": "nodes", "value": "13 nodes"}
+    - [19 nodes]{"entity": "nodes", "value": "19 nodes"}
+    - [17 note]{"entity": "nodes", "value": "17 nodes"}
+    - [17 notes]{"entity": "nodes", "value": "17 nodes"}
+    - [7 note]{"entity": "nodes", "value": "7 nodes"}
+    - [2 note]{"entity": "nodes", "value": "2 nodes"}
+    - [17 nodes]{"entity": "nodes", "value": "17 nodes"}
+    - [13 note]{"entity": "nodes", "value": "13 nodes"}
+    - [2 note]{"entity": "nodes", "value": "2 nodes"}
+    - [9 note]{"entity": "nodes", "value": "9 nodes"}
+    - [2 note]{"entity": "nodes", "value": "2 nodes"}
+    - [16 notes]{"entity": "nodes", "value": "16 nodes"}
+    - [11 note]{"entity": "nodes", "value": "11 nodes"}
+    - [12 nodes]{"entity": "nodes", "value": "12 nodes"}
+    - [19 notes]{"entity": "nodes", "value": "19 nodes"}
+    - [12 nodes]{"entity": "nodes", "value": "12 nodes"}
+    - [1 note]{"entity": "nodes", "value": "1 nodes"}
+    - [1 notes]{"entity": "nodes", "value": "1 nodes"}
+    - [13 notes]{"entity": "nodes", "value": "13 nodes"}
+    - [7 note]{"entity": "nodes", "value": "7 nodes"}
+    - [16 notes]{"entity": "nodes", "value": "16 nodes"}
+    - [18 notes]{"entity": "nodes", "value": "18 nodes"}
+    - [16 notes]{"entity": "nodes", "value": "16 nodes"}
+    - [4 notes]{"entity": "nodes", "value": "4 nodes"}
+    - [7 note]{"entity": "nodes", "value": "7 nodes"}
+    - [2 note]{"entity": "nodes", "value": "2 nodes"}
+    - [11 nodes]{"entity": "nodes", "value": "11 nodes"}
+    - [20 notes]{"entity": "nodes", "value": "20 nodes"}
+    - [2 notes]{"entity": "nodes", "value": "2 nodes"}
+    - [7 nodes]{"entity": "nodes", "value": "7 nodes"}
+    - [7 note]{"entity": "nodes", "value": "7 nodes"}
+    - [11 notes]{"entity": "nodes", "value": "11 nodes"}
+    - [19 notes]{"entity": "nodes", "value": "19 nodes"}
+    - [8 notes]{"entity": "nodes", "value": "8 nodes"}
+    - [20 nodes]{"entity": "nodes", "value": "20 nodes"}
+    - [12 notes]{"entity": "nodes", "value": "12 nodes"}
+    - [7 nodes]{"entity": "nodes", "value": "7 nodes"}
+    - [13 nodes]{"entity": "nodes", "value": "13 nodes"}
+    - [4 notes]{"entity": "nodes", "value": "4 nodes"}
+    - [3 notes]{"entity": "nodes", "value": "3 nodes"}
+    - [8 note]{"entity": "nodes", "value": "8 nodes"}
+    - [8 note]{"entity": "nodes", "value": "8 nodes"}
+    - [12 note]{"entity": "nodes", "value": "12 nodes"}
+    - [9 notes]{"entity": "nodes", "value": "9 nodes"}
+    - [16 nodes]{"entity": "nodes", "value": "16 nodes"}
+    - [6 nodes]{"entity": "nodes", "value": "6 nodes"}
+    - [9 notes]{"entity": "nodes", "value": "9 nodes"}
+    - [5 notes]{"entity": "nodes", "value": "5 nodes"}
+    - [16 note]{"entity": "nodes", "value": "16 nodes"}
+    - [10 notes]{"entity": "nodes", "value": "10 nodes"}
+    - [12 nodes]{"entity": "nodes", "value": "12 nodes"}
+    - [19 note]{"entity": "nodes", "value": "19 nodes"}
+    - [19 notes]{"entity": "nodes", "value": "19 nodes"}
+    - [2 nodes]{"entity": "nodes", "value": "2 nodes"}
+    - [17 notes]{"entity": "nodes", "value": "17 nodes"}
+    - [5 note]{"entity": "nodes", "value": "5 nodes"}
+    - [4 nodes]{"entity": "nodes", "value": "4 nodes"}
+    - [16 notes]{"entity": "nodes", "value": "16 nodes"}
+    - [13 note]{"entity": "nodes", "value": "13 nodes"}
+    - [19 nodes]{"entity": "nodes", "value": "19 nodes"}
+    - [8 note]{"entity": "nodes", "value": "8 nodes"}
+    - [13 nodes]{"entity": "nodes", "value": "13 nodes"}
+    - [2 note]{"entity": "nodes", "value": "2 nodes"}
+    - [10 note]{"entity": "nodes", "value": "10 nodes"}
+    - [14 notes]{"entity": "nodes", "value": "14 nodes"}
+    - [1 note]{"entity": "nodes", "value": "1 nodes"}
+    - [13 note]{"entity": "nodes", "value": "13 nodes"}
+    - [18 note]{"entity": "nodes", "value": "18 nodes"}
+    - [3 nodes]{"entity": "nodes", "value": "3 nodes"}
+    - [5 notes]{"entity": "nodes", "value": "5 nodes"}
+    - [7 nodes]{"entity": "nodes", "value": "7 nodes"}
+    - [7 note]{"entity": "nodes", "value": "7 nodes"}
+    - [20 note]{"entity": "nodes", "value": "20 nodes"}
+    - [5 nodes]{"entity": "nodes", "value": "5 nodes"}
+    - [7 nodes]{"entity": "nodes", "value": "7 nodes"}
+    - [20 notes]{"entity": "nodes", "value": "20 nodes"}
+    - [20 notes]{"entity": "nodes", "value": "20 nodes"}
+    - [12 nodes]{"entity": "nodes", "value": "12 nodes"}
+    - [16 nodes]{"entity": "nodes", "value": "16 nodes"}
+    - [1 nodes]{"entity": "nodes", "value": "1 nodes"}
+    - [9 note]{"entity": "nodes", "value": "9 nodes"}
+    - [19 note]{"entity": "nodes", "value": "19 nodes"}
+    - [1 notes]{"entity": "nodes", "value": "1 nodes"}
+    - [19 note]{"entity": "nodes", "value": "19 nodes"}
+    - [6 nodes]{"entity": "nodes", "value": "6 nodes"}
+    - [3 note]{"entity": "nodes", "value": "3 nodes"}
+    - [10 notes]{"entity": "nodes", "value": "10 nodes"}
+    - [3 nodes]{"entity": "nodes", "value": "3 nodes"}
+    - [2 nodes]{"entity": "nodes", "value": "2 nodes"}
+    - [2 note]{"entity": "nodes", "value": "2 nodes"}
+    - [8 note]{"entity": "nodes", "value": "8 nodes"}
+    - [14 notes]{"entity": "nodes", "value": "14 nodes"}
+    - [16 notes]{"entity": "nodes", "value": "16 nodes"}
+    - [7 notes]{"entity": "nodes", "value": "7 nodes"}
+    - [9 nodes]{"entity": "nodes", "value": "9 nodes"}
+    - [3 notes]{"entity": "nodes", "value": "3 nodes"}
+    - [11 note]{"entity": "nodes", "value": "11 nodes"}
+    - [16 notes]{"entity": "nodes", "value": "16 nodes"}
+    - [11 note]{"entity": "nodes", "value": "11 nodes"}
+    - [2 note]{"entity": "nodes", "value": "2 nodes"}
+    - [7 note]{"entity": "nodes", "value": "7 nodes"}
+    - [20 note]{"entity": "nodes", "value": "20 nodes"}
+    - [3 nodes]{"entity": "nodes", "value": "3 nodes"}
+    - [12 note]{"entity": "nodes", "value": "12 nodes"}
+    - [20 nodes]{"entity": "nodes", "value": "20 nodes"}
+    - [9 note]{"entity": "nodes", "value": "9 nodes"}
+    - [20 note]{"entity": "nodes", "value": "20 nodes"}
+    - [3 notes]{"entity": "nodes", "value": "3 nodes"}
+    - [1 notes]{"entity": "nodes", "value": "1 nodes"}
+    - [13 nodes]{"entity": "nodes", "value": "13 nodes"}
+    - [10 notes]{"entity": "nodes", "value": "10 nodes"}
+    - [17 notes]{"entity": "nodes", "value": "17 nodes"}
+    - [20 note]{"entity": "nodes", "value": "20 nodes"}
+    - [17 notes]{"entity": "nodes", "value": "17 nodes"}
+    - [14 notes]{"entity": "nodes", "value": "14 nodes"}
+    - [12 note]{"entity": "nodes", "value": "12 nodes"}
+    - [6 notes]{"entity": "nodes", "value": "6 nodes"}
+    - [9 notes]{"entity": "nodes", "value": "9 nodes"}
+    - [9 note]{"entity": "nodes", "value": "9 nodes"}
+    - [5 notes]{"entity": "nodes", "value": "5 nodes"}
+    - [16 note]{"entity": "nodes", "value": "16 nodes"}
+    - [5 note]{"entity": "nodes", "value": "5 nodes"}
+    - [7 nodes]{"entity": "nodes", "value": "7 nodes"}
+    - [1 nodes]{"entity": "nodes", "value": "1 nodes"}
+    - [13 nodes]{"entity": "nodes", "value": "13 nodes"}
+    - [15 note]{"entity": "nodes", "value": "15 nodes"}
+    - [13 note]{"entity": "nodes", "value": "13 nodes"}
+    - [14 nodes]{"entity": "nodes", "value": "14 nodes"}
+    - [8 note]{"entity": "nodes", "value": "8 nodes"}
+    - [18 nodes]{"entity": "nodes", "value": "18 nodes"}
+    - [3 nodes]{"entity": "nodes", "value": "3 nodes"}
+    - [11 notes]{"entity": "nodes", "value": "11 nodes"}
+    - [3 notes]{"entity": "nodes", "value": "3 nodes"}
+    - [9 notes]{"entity": "nodes", "value": "9 nodes"}
+    - [2 notes]{"entity": "nodes", "value": "2 nodes"}
+    - [17 notes]{"entity": "nodes", "value": "17 nodes"}
+    - [5 note]{"entity": "nodes", "value": "5 nodes"}
+    - [1 notes]{"entity": "nodes", "value": "1 nodes"}
+    - [13 note]{"entity": "nodes", "value": "13 nodes"}
+    - [11 note]{"entity": "nodes", "value": "11 nodes"}
+    - [16 nodes]{"entity": "nodes", "value": "16 nodes"}
+    - [8 note]{"entity": "nodes", "value": "8 nodes"}
+    - [17 note]{"entity": "nodes", "value": "17 nodes"}
+    - [6 nodes]{"entity": "nodes", "value": "6 nodes"}
+    - [11 note]{"entity": "nodes", "value": "11 nodes"}
+    - [6 nodes]{"entity": "nodes", "value": "6 nodes"}
+    - [4 notes]{"entity": "nodes", "value": "4 nodes"}
+    - [13 note]{"entity": "nodes", "value": "13 nodes"}
+    - [19 notes]{"entity": "nodes", "value": "19 nodes"}
+    - [13 notes]{"entity": "nodes", "value": "13 nodes"}
+    - [6 note]{"entity": "nodes", "value": "6 nodes"}
+    - [5 note]{"entity": "nodes", "value": "5 nodes"}
+    - [15 notes]{"entity": "nodes", "value": "15 nodes"}
+    - [8 notes]{"entity": "nodes", "value": "8 nodes"}
+    - [4 notes]{"entity": "nodes", "value": "4 nodes"}
+    - [4 note]{"entity": "nodes", "value": "4 nodes"}
+    - [2 notes]{"entity": "nodes", "value": "2 nodes"}
+    - [14 note]{"entity": "nodes", "value": "14 nodes"}
+    - [11 note]{"entity": "nodes", "value": "11 nodes"}
+    - [15 notes]{"entity": "nodes", "value": "15 nodes"}
+    - [20 notes]{"entity": "nodes", "value": "20 nodes"}
+    - [9 nodes]{"entity": "nodes", "value": "9 nodes"}
+    - [18 note]{"entity": "nodes", "value": "18 nodes"}
+    - [8 nodes]{"entity": "nodes", "value": "8 nodes"}
+    - [4 notes]{"entity": "nodes", "value": "4 nodes"}
+    - [2 nodes]{"entity": "nodes", "value": "2 nodes"}
+    - [9 note]{"entity": "nodes", "value": "9 nodes"}
+    - [16 nodes]{"entity": "nodes", "value": "16 nodes"}
+    - [9 nodes]{"entity": "nodes", "value": "9 nodes"}
+    - [4 nodes]{"entity": "nodes", "value": "4 nodes"}
+    - [20 notes]{"entity": "nodes", "value": "20 nodes"}
+    - [6 notes]{"entity": "nodes", "value": "6 nodes"}
+    - [8 notes]{"entity": "nodes", "value": "8 nodes"}
+    - [9 note]{"entity": "nodes", "value": "9 nodes"}
+    - [6 nodes]{"entity": "nodes", "value": "6 nodes"}
+    - [5 notes]{"entity": "nodes", "value": "5 nodes"}
+    - [15 note]{"entity": "nodes", "value": "15 nodes"}
+    - [4 notes]{"entity": "nodes", "value": "4 nodes"}
+    - [19 note]{"entity": "nodes", "value": "19 nodes"}
+    - [3 note]{"entity": "nodes", "value": "3 nodes"}
+    - [6 notes]{"entity": "nodes", "value": "6 nodes"}
+    - [91 minutes](walltime)
+    - [57 minutes](walltime)
+    - [100 days](walltime)
+    - [44 hours](walltime)
+    - [25 days](walltime)
+    - [45 hours](walltime)
+    - [48 days](walltime)
+    - [4 hours](walltime)
+    - [70 minutes](walltime)
+    - [5 days](walltime)
+    - [84 hours](walltime)
+    - [6 hours](walltime)
+    - [42 hours](walltime)
+    - [18 hours](walltime)
+    - [71 minutes](walltime)
+    - [93 hours](walltime)
+    - [34 days](walltime)
+    - [40 minutes](walltime)
+    - [30 days](walltime)
+    - [20 days](walltime)
+    - [69 days](walltime)
+    - [11 hours](walltime)
+    - [71 days](walltime)
+    - [70 days](walltime)
+    - [66 days](walltime)
+    - [92 hours](walltime)
+    - [91 hours](walltime)
+    - [10 hours](walltime)
+    - [43 days](walltime)
+    - [44 hours](walltime)
+    - [38 minutes](walltime)
+    - [75 hours](walltime)
+    - [21 hours](walltime)
+    - [16 days](walltime)
+    - [44 days](walltime)
+    - [7 hours](walltime)
+    - [67 minutes](walltime)
+    - [12 hours](walltime)
+    - [53 minutes](walltime)
+    - [27 hours](walltime)
+    - [86 hours](walltime)
+    - [75 minutes](walltime)
+    - [87 hours](walltime)
+    - [31 days](walltime)
+    - [77 minutes](walltime)
+    - [92 hours](walltime)
+    - [78 minutes](walltime)
+    - [66 minutes](walltime)
+    - [76 days](walltime)
+    - [82 minutes](walltime)
+    - [17 minutes](walltime)
+    - [84 minutes](walltime)
+    - [88 minutes](walltime)
+    - [47 days](walltime)
+    - [1 days](walltime)
+    - [86 minutes](walltime)
+    - [23 days](walltime)
+    - [85 hours](walltime)
+    - [4 hours](walltime)
+    - [34 days](walltime)
+    - [79 hours](walltime)
+    - [16 hours](walltime)
+    - [3 minutes](walltime)
+    - [55 days](walltime)
+    - [11 days](walltime)
+    - [52 minutes](walltime)
+    - [5 hours](walltime)
+    - [17 minutes](walltime)
+    - [50 days](walltime)
+    - [2 minutes](walltime)
+    - [94 minutes](walltime)
+    - [59 days](walltime)
+    - [17 minutes](walltime)
+    - [94 days](walltime)
+    - [6 hours](walltime)
+    - [11 hours](walltime)
+    - [78 days](walltime)
+    - [72 days](walltime)
+    - [13 days](walltime)
+    - [44 days](walltime)
+    - [8 minutes](walltime)
+    - [44 days](walltime)
+    - [24 minutes](walltime)
+    - [51 hours](walltime)
+    - [84 minutes](walltime)
+    - [45 days](walltime)
+    - [76 minutes](walltime)
+    - [98 days](walltime)
+    - [86 hours](walltime)
+    - [81 minutes](walltime)
+    - [80 minutes](walltime)
+    - [13 days](walltime)
+    - [17 minutes](walltime)
+    - [68 hours](walltime)
+    - [71 days](walltime)
+    - [65 hours](walltime)
+    - [89 days](walltime)
+    - [41 days](walltime)
+    - [72 days](walltime)
+    - [35 days](walltime)
+    - [92 minutes](walltime)
+    - [80 hours](walltime)
+    - [17 hours](walltime)
+    - [28 hours](walltime)
+    - [48 days](walltime)
+    - [23 days](walltime)
+    - [27 minutes](walltime)
+    - [82 days](walltime)
+    - [12 minutes](walltime)
+    - [49 days](walltime)
+    - [49 minutes](walltime)
+    - [71 minutes](walltime)
+    - [93 hours](walltime)
+    - [8 minutes](walltime)
+    - [8 hours](walltime)
+    - [67 minutes](walltime)
+    - [79 minutes](walltime)
+    - [14 hours](walltime)
+    - [92 days](walltime)
+    - [85 minutes](walltime)
+    - [9 days](walltime)
+    - [86 hours](walltime)
+    - [26 days](walltime)
+    - [69 days](walltime)
+    - [72 hours](walltime)
+    - [40 days](walltime)
+    - [76 hours](walltime)
+    - [50 hours](walltime)
+    - [100 days](walltime)
+    - [58 minutes](walltime)
+    - [98 minutes](walltime)
+    - [14 hours](walltime)
+    - [32 hours](walltime)
+    - [68 minutes](walltime)
+    - [38 minutes](walltime)
+    - [90 days](walltime)
+    - [62 hours](walltime)
+    - [45 minutes](walltime)
+    - [45 days](walltime)
+    - [51 minutes](walltime)
+    - [72 minutes](walltime)
+    - [37 days](walltime)
+    - [53 hours](walltime)
+    - [14 minutes](walltime)
+    - [67 hours](walltime)
+    - [100 hours](walltime)
+    - [53 hours](walltime)
+    - [81 days](walltime)
+    - [54 hours](walltime)
+    - [53 minutes](walltime)
+    - [89 minutes](walltime)
+    - [33 minutes](walltime)
+    - [31 hours](walltime)
+    - [35 days](walltime)
+    - [80 hours](walltime)
+    - [29 days](walltime)
+    - [94 days](walltime)
+    - [81 minutes](walltime)
+    - [46 minutes](walltime)
+    - [9 days](walltime)
+    - [42 minutes](walltime)
+    - [42 minutes](walltime)
+    - [81 minutes](walltime)
+    - [45 hours](walltime)
+    - [76 hours](walltime)
+    - [69 minutes](walltime)
+    - [42 minutes](walltime)
+    - [5 hours](walltime)
+    - [10 days](walltime)
+    - [14 hours](walltime)
+    - [1 minutes](walltime)
+    - [100 days](walltime)
+    - [44 minutes](walltime)
+    - [57 hours](walltime)
+    - [62 days](walltime)
+    - [13 days](walltime)
+    - [33 hours](walltime)
+    - [22 days](walltime)
+    - [15 hours](walltime)
+    - [18 hours](walltime)
+    - [99 hours](walltime)
+    - [51 minutes](walltime)
+    - [5 days](walltime)
+    - [74 hours](walltime)
+    - [2 minutes](walltime)
+    - [65 days](walltime)
+    - [25 hours](walltime)
+    - [78 days](walltime)
+    - [35 days](walltime)
+    - [83 minutes](walltime)
+    - [11 hours](walltime)
+    - [25 minutes](walltime)
+    - [32 hours](walltime)
+    - [6 minutes](walltime)
+    - [78 hours](walltime)
+    - [71 minutes](walltime)
+    - [59 minutes](walltime)
+    - [12 days](walltime)
+    - [97 minutes](walltime)
+    - [66 hours](walltime)
+    - [jupyter]{"entity": "program", "value": "jupyter" }
+    - [jupiter]{"entity": "program", "value": "jupyter" }
+    - [desktop]{"entity": "program", "value": "desktop" }
+    - [desk top]{"entity": "program", "value": "desktop" }
+    - [paraview]{"entity": "program", "value": "paraview" }
+    - [pair of you]{"entity": "program", "value": "paraview" }
+    - [pair a view]{"entity": "program", "value": "paraview" }
+    - [care of view]{"entity": "program", "value": "paraview" }
+    - [starccm]{"entity": "program", "value": "starccm" }
+    - [star ccm]{"entity": "program", "value": "starccm" }
+    - [star c c m]{"entity": "program", "value": "starccm" }
+    - [strcm plus]{"entity": "program", "value": "starccm" }
+    - [bison]{"entity": "program", "value": "bison" }
+    - [interactive]{"entity": "program", "value": "interactive" }
+    - [python]{"entity": "program", "value": "python" }
+    - [python3]{"entity": "program", "value": "python3" }
+    - [abaqus]{"entity": "program", "value": "abaqus" }
+    - [abacus]{"entity": "program", "value": "abaqus" }

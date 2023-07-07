@@ -1,0 +1,22 @@
+version: "3.1"
+
+intents:
+  - stop
+
+nlu:
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - cancel
+    - quit
+
+responses:
+  utter_stop:
+  - text: Okay, I am stopping.
+
+stories:
+- story: stop 1
+  steps:
+  - intent: stop
+  - action: utter_stop

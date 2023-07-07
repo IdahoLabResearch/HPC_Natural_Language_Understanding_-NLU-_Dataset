@@ -1,0 +1,167 @@
+nlu:
+- intent: submit_job
+  examples: |
+    - submit a job to hpc
+    - I want to submit code to HPC
+    - I want to run a job please
+    - I want to submit a job
+    - Submit job to H P C
+    - submit job to h p c
+    - start job on h b c please
+    - Create a job
+    - I want to use HPC
+    - i'd like to launch a job please
+    - hi i'd like to launch a job
+    - launch a job
+    - I would like to submit
+    - could you a job on [14 note]{"entity": "nodes", "value": "14 nodes"} with [22 c p u's]{"entity": "cores", "value": "22 cores"} for [74 days](walltime) now
+    - give me a job on [9 nodes]{"entity": "nodes", "value": "9 nodes"} with [84 c p u's]{"entity": "cores", "value": "84 cores"} for [47 hours](walltime) now
+    - give me a job on [11 notes]{"entity": "nodes", "value": "11 nodes"} with [32 cars]{"entity": "cores", "value": "32 cores"} for [21 minutes](walltime) 
+    - I want a job on [9 note]{"entity": "nodes", "value": "9 nodes"} with [37 c p u's]{"entity": "cores", "value": "37 cores"} for [98 hours](walltime) 
+    - launch a job on [7 notes]{"entity": "nodes", "value": "7 nodes"} with [54 corps]{"entity": "cores", "value": "54 cores"} for [68 hours](walltime) 
+    - kick off a job on [19 note]{"entity": "nodes", "value": "19 nodes"} with [70 corps]{"entity": "cores", "value": "70 cores"} for [75 hours](walltime) please
+    - can I get a job on [20 notes]{"entity": "nodes", "value": "20 nodes"} with [7 chords]{"entity": "cores", "value": "7 cores"} for [13 days](walltime) now
+    - I would like to submit a job on [17 nodes]{"entity": "nodes", "value": "17 nodes"} with [9 cpu]{"entity": "cores", "value": "9 cores"} for [60 minutes](walltime) 
+    - submit a job on [15 note]{"entity": "nodes", "value": "15 nodes"} with [54 cars]{"entity": "cores", "value": "54 cores"} for [1 hours](walltime) now
+    - submit a job on [2 note]{"entity": "nodes", "value": "2 nodes"} with [25 c p u's]{"entity": "cores", "value": "25 cores"} for [72 hours](walltime) now
+    - I want to request a a job on [13 note]{"entity": "nodes", "value": "13 nodes"} with [94 chors]{"entity": "cores", "value": "94 cores"} for [75 minutes](walltime) 
+    - can you give a job on [18 note]{"entity": "nodes", "value": "18 nodes"} with [62 cpu]{"entity": "cores", "value": "62 cores"} for [52 days](walltime) please
+    - kick off a job on [10 notes]{"entity": "nodes", "value": "10 nodes"} with [28 cars]{"entity": "cores", "value": "28 cores"} for [8 minutes](walltime) please
+    - I want to request a a job on [10 note]{"entity": "nodes", "value": "10 nodes"} with [23 c p u's]{"entity": "cores", "value": "23 cores"} for [86 hours](walltime) please
+    - could you a job on [2 nodes]{"entity": "nodes", "value": "2 nodes"} with [22 cores]{"entity": "cores", "value": "22 cores"} for [1 minutes](walltime) 
+    - launch a job on [17 nodes]{"entity": "nodes", "value": "17 nodes"} with [15 cores]{"entity": "cores", "value": "15 cores"} for [73 hours](walltime) please
+    - I want a job on [17 notes]{"entity": "nodes", "value": "17 nodes"} with [57 c p u's]{"entity": "cores", "value": "57 cores"} for [55 hours](walltime) 
+    - could you a job on [19 nodes]{"entity": "nodes", "value": "19 nodes"} with [16 cpus]{"entity": "cores", "value": "16 cores"} for [37 hours](walltime) please
+    - I want a job on [5 note]{"entity": "nodes", "value": "5 nodes"} with [72 cores]{"entity": "cores", "value": "72 cores"} for [25 days](walltime) 
+    - give me a job on [18 note]{"entity": "nodes", "value": "18 nodes"} with [45 c p u]{"entity": "cores", "value": "45 cores"} for [13 minutes](walltime) now
+    - Would it be okay if a job on [17 notes]{"entity": "nodes", "value": "17 nodes"} with [4 chords]{"entity": "cores", "value": "4 cores"} for [94 minutes](walltime) please
+    - can I get a job on [3 note]{"entity": "nodes", "value": "3 nodes"} with [67 c p u]{"entity": "cores", "value": "67 cores"} for [87 minutes](walltime) 
+    - kick off a job on [4 note]{"entity": "nodes", "value": "4 nodes"} with [35 cars]{"entity": "cores", "value": "35 cores"} for [95 days](walltime) now
+    - could you a job on [10 nodes]{"entity": "nodes", "value": "10 nodes"} with [99 cars]{"entity": "cores", "value": "99 cores"} for [67 hours](walltime) now
+    - Could I get a job on [13 nodes]{"entity": "nodes", "value": "13 nodes"} with [45 cpu]{"entity": "cores", "value": "45 cores"} for [9 days](walltime) now
+    - Would it be okay if a job on [11 note]{"entity": "nodes", "value": "11 nodes"} with [3 processor]{"entity": "cores", "value": "3 cores"} for [20 hours](walltime) now
+    - launch a job on [19 nodes]{"entity": "nodes", "value": "19 nodes"} with [76 cpu]{"entity": "cores", "value": "76 cores"} for [55 hours](walltime) please
+    - give me a job on [15 nodes]{"entity": "nodes", "value": "15 nodes"} with [8 chors]{"entity": "cores", "value": "8 cores"} for [91 hours](walltime) please
+    - Could I get a job on [4 notes]{"entity": "nodes", "value": "4 nodes"} with [75 core]{"entity": "cores", "value": "75 cores"} for [81 minutes](walltime) now
+    - can I get a job on [11 notes]{"entity": "nodes", "value": "11 nodes"} with [94 cpu]{"entity": "cores", "value": "94 cores"} for [33 days](walltime) please
+    - can I get a job on [17 note]{"entity": "nodes", "value": "17 nodes"} with [69 threads]{"entity": "cores", "value": "69 cores"} for [75 days](walltime) now
+    - I want to request a a job on [1 note]{"entity": "nodes", "value": "1 nodes"} with [96 c p u's]{"entity": "cores", "value": "96 cores"} for [11 hours](walltime) please
+    - can I get a job on [18 nodes]{"entity": "nodes", "value": "18 nodes"} with [27 chords]{"entity": "cores", "value": "27 cores"} for [36 minutes](walltime) please
+    - I want a job on [14 notes]{"entity": "nodes", "value": "14 nodes"} with [43 proc]{"entity": "cores", "value": "43 cores"} for [68 hours](walltime) please
+    - I want a job on [16 note]{"entity": "nodes", "value": "16 nodes"} with [25 cars]{"entity": "cores", "value": "25 cores"} for [5 hours](walltime) please
+    - kick off a job on [4 nodes]{"entity": "nodes", "value": "4 nodes"} with [56 cpu]{"entity": "cores", "value": "56 cores"} for [3 minutes](walltime) 
+    - submit a job on [10 nodes]{"entity": "nodes", "value": "10 nodes"} with [50 cars]{"entity": "cores", "value": "50 cores"} for [70 hours](walltime) now
+    - could you a job on [18 nodes]{"entity": "nodes", "value": "18 nodes"} with [56 corps]{"entity": "cores", "value": "56 cores"} for [55 days](walltime) please
+    - create a job on [10 notes]{"entity": "nodes", "value": "10 nodes"} with [8 core]{"entity": "cores", "value": "8 cores"} for [31 minutes](walltime) 
+    - create a job on [2 nodes]{"entity": "nodes", "value": "2 nodes"} with [72 corps]{"entity": "cores", "value": "72 cores"} for [64 hours](walltime) 
+    - I want to request a a job on [9 note]{"entity": "nodes", "value": "9 nodes"} with [70 corps]{"entity": "cores", "value": "70 cores"} for [17 hours](walltime) 
+    - create a job on [13 notes]{"entity": "nodes", "value": "13 nodes"} with [36 cores]{"entity": "cores", "value": "36 cores"} for [68 hours](walltime) 
+    - I want to request a a job on [8 notes]{"entity": "nodes", "value": "8 nodes"} with [25 threads]{"entity": "cores", "value": "25 cores"} for [21 days](walltime) now
+    - launch a job on [15 notes]{"entity": "nodes", "value": "15 nodes"} with [8 cars]{"entity": "cores", "value": "8 cores"} for [71 minutes](walltime) please
+    - launch a job on [15 notes]{"entity": "nodes", "value": "15 nodes"} with [97 chors]{"entity": "cores", "value": "97 cores"} for [61 hours](walltime) now
+    - Could I get a job on [10 note]{"entity": "nodes", "value": "10 nodes"} with [47 chors]{"entity": "cores", "value": "47 cores"} for [7 days](walltime) 
+    - Would it be okay if a job on [16 note]{"entity": "nodes", "value": "16 nodes"} with [35 core]{"entity": "cores", "value": "35 cores"} for [54 days](walltime) 
+    - launch a job on [19 nodes]{"entity": "nodes", "value": "19 nodes"} with [32 proc]{"entity": "cores", "value": "32 cores"} for [82 hours](walltime) please
+    - I want to request a a job on [8 nodes]{"entity": "nodes", "value": "8 nodes"} with [82 chorus]{"entity": "cores", "value": "82 cores"} for [27 minutes](walltime) 
+    - launch a job on [4 note]{"entity": "nodes", "value": "4 nodes"} with [63 c p u's]{"entity": "cores", "value": "63 cores"} for [64 days](walltime) please
+    - Would it be okay if a job on [20 nodes]{"entity": "nodes", "value": "20 nodes"} with [96 threads]{"entity": "cores", "value": "96 cores"} for [18 minutes](walltime) 
+    - Would it be okay if a job on [11 notes]{"entity": "nodes", "value": "11 nodes"} with [28 threads]{"entity": "cores", "value": "28 cores"} for [52 days](walltime) 
+    - run a job on [9 note]{"entity": "nodes", "value": "9 nodes"} with [30 chorus]{"entity": "cores", "value": "30 cores"} for [73 minutes](walltime) 
+    - launch a job on [11 nodes]{"entity": "nodes", "value": "11 nodes"} with [26 core]{"entity": "cores", "value": "26 cores"} for [74 days](walltime) 
+    - execute a job on [18 notes]{"entity": "nodes", "value": "18 nodes"} with [60 cars]{"entity": "cores", "value": "60 cores"} for [77 minutes](walltime) please
+    - can I get a job on [8 nodes]{"entity": "nodes", "value": "8 nodes"} with [29 chords]{"entity": "cores", "value": "29 cores"} for [36 hours](walltime) please
+    - execute a job on [19 notes]{"entity": "nodes", "value": "19 nodes"} with [75 processor]{"entity": "cores", "value": "75 cores"} for [46 hours](walltime) 
+    - I would like to submit a job on [8 nodes]{"entity": "nodes", "value": "8 nodes"} with [49 processor]{"entity": "cores", "value": "49 cores"} for [54 minutes](walltime) please
+    - create a job on [9 note]{"entity": "nodes", "value": "9 nodes"} with [42 threads]{"entity": "cores", "value": "42 cores"} for [5 minutes](walltime) now
+    - I want a job on [3 nodes]{"entity": "nodes", "value": "3 nodes"} with [68 cpus]{"entity": "cores", "value": "68 cores"} for [36 days](walltime) please
+    - run a job on [6 note]{"entity": "nodes", "value": "6 nodes"} with [75 threads]{"entity": "cores", "value": "75 cores"} for [78 minutes](walltime) 
+    - start a job on [3 note]{"entity": "nodes", "value": "3 nodes"} with [77 chorus]{"entity": "cores", "value": "77 cores"} for [86 hours](walltime) please
+    - execute a job on [11 nodes]{"entity": "nodes", "value": "11 nodes"} with [60 c p u's]{"entity": "cores", "value": "60 cores"} for [62 hours](walltime) 
+    - I want a job on [9 notes]{"entity": "nodes", "value": "9 nodes"} with [49 core]{"entity": "cores", "value": "49 cores"} for [16 minutes](walltime) please
+    - I want a job on [15 notes]{"entity": "nodes", "value": "15 nodes"} with [8 chords]{"entity": "cores", "value": "8 cores"} for [78 hours](walltime) 
+    - I would like to submit a job on [19 notes]{"entity": "nodes", "value": "19 nodes"} with [45 chords]{"entity": "cores", "value": "45 cores"} for [5 minutes](walltime) please
+    - Do you mind a job on [12 nodes]{"entity": "nodes", "value": "12 nodes"} with [85 cars]{"entity": "cores", "value": "85 cores"} for [39 days](walltime) 
+    - Could I get a job on [1 notes]{"entity": "nodes", "value": "1 nodes"} with [82 cpus]{"entity": "cores", "value": "82 cores"} for [91 days](walltime) please
+    - can you provide a job on [5 nodes]{"entity": "nodes", "value": "5 nodes"} with [43 corps]{"entity": "cores", "value": "43 cores"} for [43 hours](walltime) now
+    - I want to request a a job on [16 nodes]{"entity": "nodes", "value": "16 nodes"} with [77 chors]{"entity": "cores", "value": "77 cores"} for [51 hours](walltime) please
+    - open a job on [16 note]{"entity": "nodes", "value": "16 nodes"} with [96 chors]{"entity": "cores", "value": "96 cores"} for [41 minutes](walltime) 
+    - execute a job on [18 nodes]{"entity": "nodes", "value": "18 nodes"} with [21 proc]{"entity": "cores", "value": "21 cores"} for [66 days](walltime) please
+    - run a job on [6 notes]{"entity": "nodes", "value": "6 nodes"} with [76 corps]{"entity": "cores", "value": "76 cores"} for [46 hours](walltime) now
+    - Do you mind a job on [4 notes]{"entity": "nodes", "value": "4 nodes"} with [28 cores]{"entity": "cores", "value": "28 cores"} for [45 minutes](walltime) 
+    - Do you mind a job on [13 notes]{"entity": "nodes", "value": "13 nodes"} with [13 cores]{"entity": "cores", "value": "13 cores"} for [94 minutes](walltime) please
+    - can I get a job on [12 nodes]{"entity": "nodes", "value": "12 nodes"} with [69 chors]{"entity": "cores", "value": "69 cores"} for [93 minutes](walltime) now
+    - I want a job on [14 note]{"entity": "nodes", "value": "14 nodes"} with [93 core]{"entity": "cores", "value": "93 cores"} for [62 hours](walltime) please
+    - Do you mind a job on [20 nodes]{"entity": "nodes", "value": "20 nodes"} with [30 threads]{"entity": "cores", "value": "30 cores"} for [70 hours](walltime) 
+    - Would it be okay if a job on [12 notes]{"entity": "nodes", "value": "12 nodes"} with [89 c p u]{"entity": "cores", "value": "89 cores"} for [100 minutes](walltime) please
+    - Would it be okay if a job on [1 notes]{"entity": "nodes", "value": "1 nodes"} with [95 c p u's]{"entity": "cores", "value": "95 cores"} for [42 minutes](walltime) please
+    - can I get a job on [3 notes]{"entity": "nodes", "value": "3 nodes"} with [68 proc]{"entity": "cores", "value": "68 cores"} for [61 days](walltime) now
+    - can you provide a job on [2 note]{"entity": "nodes", "value": "2 nodes"} with [71 threads]{"entity": "cores", "value": "71 cores"} for [56 hours](walltime) now
+    - execute a job on [16 note]{"entity": "nodes", "value": "16 nodes"} with [38 corps]{"entity": "cores", "value": "38 cores"} for [85 hours](walltime) please
+    - execute a job on [17 note]{"entity": "nodes", "value": "17 nodes"} with [50 chords]{"entity": "cores", "value": "50 cores"} for [79 days](walltime) please
+    - submit a job on [5 nodes]{"entity": "nodes", "value": "5 nodes"} with [79 proc]{"entity": "cores", "value": "79 cores"} for [22 hours](walltime) 
+    - can you provide a job on [8 note]{"entity": "nodes", "value": "8 nodes"} with [90 chords]{"entity": "cores", "value": "90 cores"} for [77 minutes](walltime) please
+    - I want to request a a job on [17 note]{"entity": "nodes", "value": "17 nodes"} with [93 processor]{"entity": "cores", "value": "93 cores"} for [99 minutes](walltime) 
+    - give me a job on [4 nodes]{"entity": "nodes", "value": "4 nodes"} with [31 c p u]{"entity": "cores", "value": "31 cores"} for [33 minutes](walltime) 
+    - I want a job on [5 notes]{"entity": "nodes", "value": "5 nodes"} with [41 c p u]{"entity": "cores", "value": "41 cores"} for [77 minutes](walltime) please
+    - Do you mind a job on [17 notes]{"entity": "nodes", "value": "17 nodes"} with [66 threads]{"entity": "cores", "value": "66 cores"} for [23 hours](walltime) 
+    - Would it be okay if a job on [5 notes]{"entity": "nodes", "value": "5 nodes"} with [87 proc]{"entity": "cores", "value": "87 cores"} for [57 hours](walltime) now
+    - Do you mind a job on [8 note]{"entity": "nodes", "value": "8 nodes"} with [70 cars]{"entity": "cores", "value": "70 cores"} for [52 days](walltime) now
+    - I would like to submit a job on [13 nodes]{"entity": "nodes", "value": "13 nodes"} with [91 corps]{"entity": "cores", "value": "91 cores"} for [98 days](walltime) now
+    - give me a job on [14 note]{"entity": "nodes", "value": "14 nodes"} with [60 threads]{"entity": "cores", "value": "60 cores"} for [11 minutes](walltime) now
+    - kick off a job on [16 notes]{"entity": "nodes", "value": "16 nodes"} with [29 threads]{"entity": "cores", "value": "29 cores"} for [26 minutes](walltime) please
+    - execute a job on [18 notes]{"entity": "nodes", "value": "18 nodes"} with [5 chorus]{"entity": "cores", "value": "5 cores"} for [89 hours](walltime) please
+    - can I get a job on [5 notes]{"entity": "nodes", "value": "5 nodes"} with [19 threads]{"entity": "cores", "value": "19 cores"} for [31 days](walltime) please
+    - execute a job on [17 nodes]{"entity": "nodes", "value": "17 nodes"} with [49 chorus]{"entity": "cores", "value": "49 cores"} for [63 days](walltime) 
+    - I want to request a a job on [17 notes]{"entity": "nodes", "value": "17 nodes"} with [23 processor]{"entity": "cores", "value": "23 cores"} for [5 minutes](walltime) now
+    - Could I get a job on [3 nodes]{"entity": "nodes", "value": "3 nodes"} with [68 c p u]{"entity": "cores", "value": "68 cores"} for [58 minutes](walltime) now
+    - could you a job on [9 notes]{"entity": "nodes", "value": "9 nodes"} with [87 cars]{"entity": "cores", "value": "87 cores"} for [21 hours](walltime) please
+    - create a job on [19 notes]{"entity": "nodes", "value": "19 nodes"} with [43 proc]{"entity": "cores", "value": "43 cores"} for [78 hours](walltime) 
+    - submit a job on [10 notes]{"entity": "nodes", "value": "10 nodes"} with [78 threads]{"entity": "cores", "value": "78 cores"} for [94 minutes](walltime) please
+    - run a job on [7 notes]{"entity": "nodes", "value": "7 nodes"} with [29 c p u]{"entity": "cores", "value": "29 cores"} for [77 minutes](walltime) now
+    - Could I get a job on [16 notes]{"entity": "nodes", "value": "16 nodes"} with [85 threads]{"entity": "cores", "value": "85 cores"} for [84 days](walltime) now
+    - Do you mind a job on [7 notes]{"entity": "nodes", "value": "7 nodes"} with [31 threads]{"entity": "cores", "value": "31 cores"} for [74 minutes](walltime) now
+    - start a job on [14 notes]{"entity": "nodes", "value": "14 nodes"} with [12 core]{"entity": "cores", "value": "12 cores"} for [67 minutes](walltime) please
+    - can you provide a job on [19 nodes]{"entity": "nodes", "value": "19 nodes"} with [8 c p u's]{"entity": "cores", "value": "8 cores"} for [63 minutes](walltime) 
+    - can you provide a job on [12 note]{"entity": "nodes", "value": "12 nodes"} with [63 threads]{"entity": "cores", "value": "63 cores"} for [73 days](walltime) please
+    - can I get a job on [6 notes]{"entity": "nodes", "value": "6 nodes"} with [98 processor]{"entity": "cores", "value": "98 cores"} for [90 minutes](walltime) please
+    - can I get a job on [2 notes]{"entity": "nodes", "value": "2 nodes"} with [58 cpu]{"entity": "cores", "value": "58 cores"} for [98 hours](walltime) now
+    - start a job on [2 notes]{"entity": "nodes", "value": "2 nodes"} with [51 chords]{"entity": "cores", "value": "51 cores"} for [98 minutes](walltime) please
+    - I would like to submit a job on [13 note]{"entity": "nodes", "value": "13 nodes"} with [74 chorus]{"entity": "cores", "value": "74 cores"} for [41 days](walltime) please
+    - could you a job on [6 nodes]{"entity": "nodes", "value": "6 nodes"} with [10 cpu]{"entity": "cores", "value": "10 cores"} for [68 hours](walltime) 
+    - open a job on [4 note]{"entity": "nodes", "value": "4 nodes"} with [33 threads]{"entity": "cores", "value": "33 cores"} for [88 hours](walltime) 
+    - give me a job on [14 nodes]{"entity": "nodes", "value": "14 nodes"} with [95 cars]{"entity": "cores", "value": "95 cores"} for [48 days](walltime) please
+    - run a job on [15 note]{"entity": "nodes", "value": "15 nodes"} with [90 cpu]{"entity": "cores", "value": "90 cores"} for [93 days](walltime) please
+    - Do you mind a job on [18 nodes]{"entity": "nodes", "value": "18 nodes"} with [29 chords]{"entity": "cores", "value": "29 cores"} for [46 hours](walltime) please
+    - could you a job on [13 nodes]{"entity": "nodes", "value": "13 nodes"} with [78 chords]{"entity": "cores", "value": "78 cores"} for [2 hours](walltime) please
+    - could you a job on [14 notes]{"entity": "nodes", "value": "14 nodes"} with [65 chords]{"entity": "cores", "value": "65 cores"} for [22 days](walltime) 
+    - Would it be okay if a job on [4 nodes]{"entity": "nodes", "value": "4 nodes"} with [6 cars]{"entity": "cores", "value": "6 cores"} for [11 hours](walltime) 
+    - create a job on [5 note]{"entity": "nodes", "value": "5 nodes"} with [94 processor]{"entity": "cores", "value": "94 cores"} for [58 hours](walltime) now
+    - I want a job on [12 note]{"entity": "nodes", "value": "12 nodes"} with [45 c p u's]{"entity": "cores", "value": "45 cores"} for [16 days](walltime) now
+    - I would like to submit a job on [17 nodes]{"entity": "nodes", "value": "17 nodes"} with [58 chords]{"entity": "cores", "value": "58 cores"} for [95 hours](walltime) now
+    - Do you mind a job on [2 note]{"entity": "nodes", "value": "2 nodes"} with [85 corps]{"entity": "cores", "value": "85 cores"} for [43 hours](walltime) 
+    - Would it be okay if a job on [4 notes]{"entity": "nodes", "value": "4 nodes"} with [98 cpu]{"entity": "cores", "value": "98 cores"} for [40 minutes](walltime) please
+    - Could I get a job on [1 note]{"entity": "nodes", "value": "1 nodes"} with [69 chorus]{"entity": "cores", "value": "69 cores"} for [15 days](walltime) now
+    - Could I get a job on [2 note]{"entity": "nodes", "value": "2 nodes"} with [8 cpu]{"entity": "cores", "value": "8 cores"} for [89 minutes](walltime) please
+    - I want a job on [7 nodes]{"entity": "nodes", "value": "7 nodes"} with [68 proc]{"entity": "cores", "value": "68 cores"} for [64 days](walltime) now
+    - kick off a job on [16 nodes]{"entity": "nodes", "value": "16 nodes"} with [83 chords]{"entity": "cores", "value": "83 cores"} for [5 minutes](walltime) 
+    - execute a job on [9 nodes]{"entity": "nodes", "value": "9 nodes"} with [28 c p u]{"entity": "cores", "value": "28 cores"} for [57 minutes](walltime) now
+    - submit a job on [14 nodes]{"entity": "nodes", "value": "14 nodes"} with [14 cars]{"entity": "cores", "value": "14 cores"} for [51 days](walltime) now
+    - can you provide a job on [13 note]{"entity": "nodes", "value": "13 nodes"} with [92 c p u's]{"entity": "cores", "value": "92 cores"} for [56 minutes](walltime) now
+    - I would like to submit a job on [17 nodes]{"entity": "nodes", "value": "17 nodes"} with [59 corps]{"entity": "cores", "value": "59 cores"} for [52 days](walltime) 
+    - I want a job on [13 notes]{"entity": "nodes", "value": "13 nodes"} with [6 chorus]{"entity": "cores", "value": "6 cores"} for [9 minutes](walltime) please
+    - I would like to submit a job on [14 note]{"entity": "nodes", "value": "14 nodes"} with [36 cpus]{"entity": "cores", "value": "36 cores"} for [72 minutes](walltime) 
+    - I would like to submit a job on [4 nodes]{"entity": "nodes", "value": "4 nodes"} with [38 c p u's]{"entity": "cores", "value": "38 cores"} for [99 hours](walltime) now
+    - can I get a job on [19 note]{"entity": "nodes", "value": "19 nodes"} with [7 corps]{"entity": "cores", "value": "7 cores"} for [6 days](walltime) now
+    - can I get a job on [11 note]{"entity": "nodes", "value": "11 nodes"} with [89 threads]{"entity": "cores", "value": "89 cores"} for [57 days](walltime) now
+    - Would it be okay if a job on [3 notes]{"entity": "nodes", "value": "3 nodes"} with [47 chords]{"entity": "cores", "value": "47 cores"} for [51 minutes](walltime) now
+    - run a job on [8 notes]{"entity": "nodes", "value": "8 nodes"} with [47 c p u's]{"entity": "cores", "value": "47 cores"} for [63 minutes](walltime) now
+    - submit a job on [2 notes]{"entity": "nodes", "value": "2 nodes"} with [19 chors]{"entity": "cores", "value": "19 cores"} for [84 hours](walltime) 
+    - submit a job on [16 nodes]{"entity": "nodes", "value": "16 nodes"} with [50 cpu]{"entity": "cores", "value": "50 cores"} for [71 minutes](walltime) now
+    - give me a job on [20 notes]{"entity": "nodes", "value": "20 nodes"} with [7 corps]{"entity": "cores", "value": "7 cores"} for [14 hours](walltime) please
+    - could you a job on [14 notes]{"entity": "nodes", "value": "14 nodes"} with [4 corps]{"entity": "cores", "value": "4 cores"} for [74 hours](walltime) 
+    - can I get a job on [4 note]{"entity": "nodes", "value": "4 nodes"} with [89 c p u]{"entity": "cores", "value": "89 cores"} for [37 days](walltime) 
+    - Could I get a job on [9 notes]{"entity": "nodes", "value": "9 nodes"} with [63 chords]{"entity": "cores", "value": "63 cores"} for [40 minutes](walltime) please
+    - I want a job on [9 nodes]{"entity": "nodes", "value": "9 nodes"} with [65 cpus]{"entity": "cores", "value": "65 cores"} for [23 minutes](walltime) please
+    - Do you mind a job on [20 nodes]{"entity": "nodes", "value": "20 nodes"} with [29 threads]{"entity": "cores", "value": "29 cores"} for [44 minutes](walltime) please
+    - create a job on [13 notes]{"entity": "nodes", "value": "13 nodes"} with [15 chors]{"entity": "cores", "value": "15 cores"} for [46 hours](walltime) now
+   

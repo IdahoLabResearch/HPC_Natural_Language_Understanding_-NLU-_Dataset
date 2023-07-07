@@ -1,0 +1,72 @@
+version: "3.1"
+
+intents:
+- help_submitting_jobs
+- all_of_them
+- duration_too_long
+
+nlu:
+- intent: help_submitting_jobs
+  examples: |
+    - How do I submit a job?
+    - How do I schedule a job?
+    - how do I run code?
+    - how do I
+    - help me with
+    - teach me how to use hpc
+    - how can I submit a job?
+    - can I submit a job?
+
+- intent: all_of_them
+  examples: |
+    - all of them
+    - all nodes
+    - all cores
+
+- intent: duration_too_long
+  examples: |
+    - year
+    - years
+    - submit for years
+    - 40 years
+
+responses:
+  utter_submitting_jobs:
+  - text: "You can find more information for running jobs by visiting our website: {HPC_SUPPORT_WEBSITE} or you can say 'I want to submit a job' and I'll help you submit your first job."
+
+  utter_all_of_them:
+  - text: "Sorry, you can't request everything. Please submit a specific number."
+
+  utter_duration_too_long:
+  - text: "Sorry, years is too long. Please specify a number of minutes, hours, or days."
+
+stories:
+- story: help_submitting_jobs 1
+  steps:
+  - intent: help_submitting_jobs
+  - action: utter_submitting_jobs
+
+- story: help_submitting_jobs 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_submitting_jobs
+  - action: utter_submitting_jobs
+
+- story: all_of_them 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: submit_job
+  - action: job_request_form
+  - intent: all_of_them
+  - action: utter_all_of_them
+
+- story: duration_too_long 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: submit_job
+  - action: job_request_form
+  - intent: duration_too_long
+  - action: utter_duration_too_long

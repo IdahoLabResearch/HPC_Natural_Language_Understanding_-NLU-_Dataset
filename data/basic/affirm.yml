@@ -1,0 +1,30 @@
+version: "3.1"
+
+intents:
+  - affirm
+
+nlu:
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes please
+
+responses:
+  utter_affirm:
+  - text: "Thanks for confirming."
+
+stories:
+- story: affirm 1
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: affirm 2
+  steps:
+  - intent: affirm
+  - action: utter_affirm

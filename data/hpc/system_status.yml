@@ -1,0 +1,30 @@
+version: "3.1"
+
+intents:
+- hpc_system_status
+
+nlu:
+- intent: hpc_system_status
+  examples: |
+    - update me on the status of [SYSTEM]{"entity": "system_name"}
+    - status of [SYSTEM]{"entity": "system_name"}
+    - What's the status of [SYSTEM]{"entity": "system_name"}?
+
+responses:
+  utter_hpc_system_status:
+  - text: "The HPC systems are OK!"
+  - text: "The HPC systems are Great!"
+  - text: "The HPC systems are normal."
+
+stories:
+- story: hpc system status 1
+  steps:
+  - intent: hpc_system_status
+  - action: utter_hpc_system_status
+
+- story: hpc system status 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: hpc_system_status
+  - action: utter_hpc_system_status

@@ -1,0 +1,34 @@
+version: "3.1"
+
+intents:
+  - mood_great
+
+nlu:
+- intent: mood_great
+  examples: |
+    - great
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I'm well
+    - I'm happy
+  
+responses:  
+  utter_mood_great:
+  - text: "Great, I'm glad to hear you're doing well!"
+  
+stories:
+- story: mood_great path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_mood_great
